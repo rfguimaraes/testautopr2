@@ -16,3 +16,4 @@ Add even more stuff
 🐟
 🕶️
 ⭐
+🗜️
