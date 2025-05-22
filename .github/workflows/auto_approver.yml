@@ -9,21 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: ls -1
-  auto-approve:
-    runs-on: ubuntu-latest
-    # if: github.actor == 'rfguimaraes' && github.event.pull_request.head.repo.full_name == 'testautopr/testautopr' && github.event.pull_request.base.ref == 'main' && github.event.pull_request.head.ref == 'updates' && github.event.pull_request.draft == false
-    permissions:
-      pull-requests: write
-    steps:
-      - name: Checkout approver
-        uses: actions/checkout@v4
-        with:
-          repository: testautopr/auto-approve-action
-          ref: b025421c6ff3f98b093a19fb44d3ea051c5ccf8c
-          token: ${{ secrets.APPROVER_TOKEN }}
-          path: ./.github/actions/auto-approve-action
-      - name: Run auto approver 
-        uses: ./.github/actions/auto-approve-action/action.yml
   just_echo:
     runs-on: ubuntu-latest
     steps:
