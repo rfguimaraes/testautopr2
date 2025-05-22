@@ -15,3 +15,4 @@ Add even more stuff
 🏅
 🐟
 🕶️
+⭐
