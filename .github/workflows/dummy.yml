@@ -1,0 +1,19 @@
+name: Dummy Workflow
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      customMessage:
+        description: 'Message to display'
+        required: false
+        default: 'No message provided'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print input or default
+        run: |
+          echo "Triggered by: ${{ github.event_name }}"
+          echo "Custom Message: ${{ github.event.inputs.customMessage }}"
