@@ -7,3 +7,4 @@ Add even more stuff
 :warning:
 ℹ️ 
 🎲
+📘
